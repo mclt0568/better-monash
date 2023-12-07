@@ -30,7 +30,7 @@ To start debugging:
 
 1. Run `npm build` to build the plugin. The output will be in the dist directory.
 2. Have another terminal `cd`'ed into the dist directory. Keep that terminal open.
-3. Run `web-ext` in the dist directory.
+3. Run `web-ext run` in the dist directory.
 4. In the temporary browser, go to extension settings and enable permissions for the extension.
 5. Go to Moodle webpage and start debugging.
 6. When updating files:
