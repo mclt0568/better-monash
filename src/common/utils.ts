@@ -1,3 +1,5 @@
-function sideLoadStyles(filename: string): void{
-  console.log(`Loading ${filename}`);
+function loadStyles(namespace: string, filename: string): void {
+  console.log(`Loading ${namespace}/${filename}`);
 }
+
+export {loadStyles};

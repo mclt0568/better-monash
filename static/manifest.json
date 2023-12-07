@@ -17,7 +17,7 @@
 
   "web_accessible_resources": [
     {
-      "resources": ["moodle_4_1/styles.css"],
+      "resources": ["moodle41/styles.css"],
       "matches": ["*://learning.monash.edu/*"]
     }
   ],
@@ -25,10 +25,7 @@
   "content_scripts": [
     {
       "matches": ["*://learning.monash.edu/*"],
-      "js": [
-        "common/utils.js",
-        "moodle_4_1/script.js"
-      ]
+      "js": ["moodle41.bundle.js"]
     }
   ]
 }
