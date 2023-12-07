@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "pnpm run clear-dist && tsc && pnpm run copy-static",
-    "clear-dist": "rm -r dist && mkdir dist",
+    "clear-dist": "rm -r dist/*",
     "copy-static": "cp -r static/* dist"
   },
   "keywords": [],
