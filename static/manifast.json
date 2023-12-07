@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Better Monash",
+  "description": "Customised Monash Webpages (Even better then stock?!?!?!11?11 😮)",
+  "author": "Frankium",
+  "version": "1.0",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "better_monash@frankium.com"
+    }
+  },
+
+  "icons": {
+    "48": "icons/icon_48.png"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["moodle_4_1/styles.css"],
+      "matches": ["*://learning.monash.edu/*"]
+    }
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://learning.monash.edu/*"],
+      "js": [
+        "common/utils.js",
+        "moodle_4_1/script.js"
+      ]
+    }
+  ]
+}

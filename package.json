@@ -1,0 +1,17 @@
+{
+  "name": "better-monash",
+  "version": "1.0.0",
+  "description": "Customised Monash Webpages (Even better then stock?!?!?!11?11 😮",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm run clear-dist && tsc && pnpm run copy-static",
+    "clear-dist": "rm -r dist && mkdir dist",
+    "copy-static": "cp -r static/* dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
