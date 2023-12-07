@@ -1,4 +1,5 @@
-import * as browser from "webextension-polyfill";
+import { loadStyles } from "@/common/utils";
 
-const x = browser.runtime.getURL("moodle41/styles.css");
-console.log(x);
+const namespace = "moodle41";
+
+loadStyles(namespace, "styles");

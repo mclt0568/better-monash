@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jquery": "^3.5.29",
+    "@types/webextension-polyfill": "^0.10.7",
     "ts-loader": "^9.5.1",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^5.3.3",
@@ -21,7 +23,7 @@
     "webpack-manifest-plugin": "^5.0.0"
   },
   "dependencies": {
-    "@types/webextension-polyfill": "^0.10.7",
+    "jquery": "^3.7.1",
     "webextension-polyfill": "^0.10.0"
   }
 }
