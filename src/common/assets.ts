@@ -7,11 +7,20 @@ type Asset = Readonly<{
   data: string,
 }>;
 
+type Variable = Readonly<{
+  name: string,
+  value: string,
+}>;
+
 let assets: Asset[] = [];
+let variables: Variable[] = [];
 
 function assetsToCSS(assets: Asset[]): string{
-  const rules = assets.map(({name, data})=>`--${name}: url(${data});`).join();
-  return ":root{" + rules + "}";
+  return assets.map(({name, data})=>`--${name}: url(${data});`).join();
+}
+
+function variablesToCSS(variable: Variable[]): string{
+  return variable.map(({name, value})=>`--${name}: ${value};`).join();
 }
 
 function getStyleElement(): JQuery<HTMLElement>{
@@ -26,10 +35,21 @@ function getStyleElement(): JQuery<HTMLElement>{
   return elem;
 }
 
-function registerAssets(rawAssets: Asset[]){
-  assets = [...assets, ...rawAssets];
-  getStyleElement().empty().text(assetsToCSS(rawAssets));
+function registerAssets(newAssets: Asset[]){
+  assets = [...assets, ...newAssets];
+  registerAll();
 }
 
-export type {Asset};
-export {registerAssets};
+function registerVariables(newVariables: Variable[]){
+  variables = [...variables, ...newVariables];
+  registerAll();
+}
+
+function registerAll(){
+  getStyleElement().empty().text(
+    ":root{" + assetsToCSS(assets) + variablesToCSS(variables) + "}"
+  );
+}
+
+export type {Asset, Variable};
+export {registerAssets, registerVariables};
