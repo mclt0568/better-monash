@@ -38,7 +38,7 @@ li[data-key=home]{
 }
 
 .bm-nav-link {
-  padding: 10px 20px 10px 10px;
+  padding: 10px 30px 10px 10px;
   height: $navbar-height;
 
   &.bm-home {
@@ -55,6 +55,8 @@ li[data-key=home]{
     }
   }
 }
+
+// notification
 
 .popover-region-notifications{
   padding: 0 !important;
@@ -141,5 +143,23 @@ li[data-key=home]{
       color: $foreground-secondary !important;
       padding: 15px 10px;
     }
+  }
+}
+
+// message
+.bm-message-popover-btn{
+  padding: 0 !important;
+  height: $navbar-height;
+  width: $navbar-height;
+  display: flex !important;
+  
+  & a{
+    background-image: none !important;
+    display: block !important;
+    width: $navbar-height !important;
+    height: $navbar-height !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
   }
 }

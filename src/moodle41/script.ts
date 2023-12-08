@@ -4,10 +4,10 @@ import $ from "jquery";
 import { colorScheme, misc, typography } from "./variables";
 import "./styles/main.scss";
 
-import arrowUp from "./assets/arrowUp.svg";
 import buttonDecoration from "./assets/buttonDecoration.svg";
 import catalog from "./assets/catalog.svg";
 import certificate from "./assets/certificate.svg";
+import chevronRight from "./assets/chevronRight.svg";
 import course from "./assets/course.svg";
 import forum from "./assets/forum.svg";
 import help from "./assets/help.svg";
@@ -148,6 +148,16 @@ if ($(".see-all-link > *").length === 0){
   $(".see-all-link")
   .append("See All")
   .append($("<img/>").attr({
-    src: arrowUp,
+    src: chevronRight,
   }));
 }
+
+// message button
+$("div[data-region=\"popover-region-messages\"]")
+.addClass("bm-message-popover-btn")
+
+$(".bm-message-popover-btn a")
+  .empty()
+  .append($("<img/>").attr({
+    src: forum,
+  }));
