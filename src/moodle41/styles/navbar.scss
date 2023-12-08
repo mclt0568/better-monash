@@ -1,0 +1,145 @@
+@import "./variable_proxy.scss";
+
+$navbar-height: 40px;
+$icon-btn-size: 40px;
+
+// Set height
+.navbar.fixed-top, .bm-nav-link {
+  height: $navbar-height;
+}
+
+// Navbar
+.navbar.fixed-top {
+  height: $navbar-height;
+  padding: 0;
+  background-color: $background;
+  border-bottom: 0;
+}
+
+// Navbar layout
+.navbar{
+  &>div{
+    margin: 0;
+  }
+  &>.primary-navigation{
+    flex: 1;
+  }
+}
+
+
+// left link buttons
+.navbar-nav{
+  width: 100%;
+}
+
+li[data-key=home]{
+  max-width: 350px;
+  flex: 1;
+}
+
+.bm-nav-link {
+  padding: 10px 20px 10px 10px;
+  height: $navbar-height;
+
+  &.bm-home {
+    width: 100%;
+    padding: 10px 20px 10px 15px;
+    background-image: $button-decoration;
+    background-repeat: no-repeat;
+    background-position: right 2px center;
+    
+    &:hover {
+      background-image: $button-decoration;
+      background-repeat: no-repeat;
+      background-position: right -5px center;
+    }
+  }
+}
+
+.popover-region-notifications{
+  padding: 0 !important;
+  height: $navbar-height;
+  width: $navbar-height;
+  
+  & .popover-region-toggle{
+    background-image: none !important;
+    width: $navbar-height !important;
+    height: $navbar-height !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.popover-region-toggle::before{
+  border: 0 !important;
+}
+
+.popover-region-toggle::after{
+  border: 0 !important;
+  left: 0px !important;
+  top: 0px !important;
+  right: unset !important;
+  bottom: unset !important;
+  width: $navbar-height;
+  height: $navbar-height;
+  background-color: $background;
+  background-image: $notification;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: $default-float;
+}
+
+.popover-region-container {
+  top: $navbar-height !important;
+  box-shadow: $default-float;
+  z-index: 99;
+  border: 0 !important;
+  background-color: $background !important;
+  display: flex;
+  flex-direction: column;
+  width: 200px !important;
+  height: auto !important;
+  transition: 0s !important;
+
+  // header
+  & .bm-header-container{
+    padding: 10px;
+
+    & h3 {
+      font-size: $size-header;
+      font-weight: $weight-regular;
+      color: $foreground;
+    }
+  }
+
+  // action buttons
+  & .bm-notification-actions{
+    display: flex;
+    width: 100%;
+    height: $icon-btn-size;
+    
+    & a{
+      width: $icon-btn-size;
+      
+      &.see-all-link{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+    }
+  }
+
+  // content container
+  & .popover-region-content-container{
+    height: auto !important;
+    
+    & .empty-message{
+      font-size: $size-paragraph;
+      font-weight: $weight-regular;
+      color: $foreground-secondary !important;
+      padding: 15px 10px;
+    }
+  }
+}

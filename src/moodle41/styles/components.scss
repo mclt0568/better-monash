@@ -1,0 +1,78 @@
+@import "./variable_proxy.scss";
+
+.bm-button{
+  background-color: $background;
+  font-size: $size-button-caption;
+  color: $foreground;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  transition: 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  
+  &:hover{
+    background-color: $background-active;
+    color: $foreground;
+    text-decoration: none;
+  }
+  
+  &.bm-accented{
+    background-color: $accent;
+    color: $background-secondary;
+    
+    &:hover{
+      background-color: $accent-active;
+      color: $background-secondary;
+      text-decoration: none;
+    }
+  }
+
+  &.bm-accent-secondary{
+    background-color: $accent-background;
+    color: $accent;
+
+    &:hover{
+      background-color: $accent-background-active;
+      text-decoration: none;
+    }
+  }
+}
+
+.bm-icon-btn{
+  background-color: $background;
+  font-size: $size-button-caption;
+  color: $foreground;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  
+  &:hover{
+    background-color: $background-active;
+    color: $foreground;
+    text-decoration: none;
+  }
+  
+  &.bm-white{
+    background-color: $background-secondary;
+    
+    &:hover{
+      background-color: $background-active;
+      color: $foreground;
+      text-decoration: none;
+    }
+  }
+  
+  &.bm-accent-secondary{
+    background-color: $accent-background;
+    color: $accent;
+
+    &:hover{
+      background-color: $accent-background-active;
+      text-decoration: none;
+    }
+  }
+}

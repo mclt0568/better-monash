@@ -1,8 +1,9 @@
 import { Variable } from "@common/assets";
 
-const scheme: Variable[] = [
+const colorScheme: Variable[] = [
   {name:"accent", value: "#006144",},
-  {name:"accent-active", value: "#0B7A59",},
+  {name:"accent-active", value: "#04704F",},
+  {name:"accent-decoration", value: "#047D59",},
   {name:"accent-background", value: "#E4FAF3",},
   {name:"accent-background-active", value: "#D8F4EB",},
   {name:"background", value: "#F8F8F8",},
@@ -15,4 +16,15 @@ const scheme: Variable[] = [
   {name:"scheme-dangerous-background", value: "#FFE3E3",},
 ];
 
-export {scheme};
+const misc: Variable[] = [
+  {name:"default-float", value: "0px 3px 3px 0px rgba(0,0,0,0.24)",},
+];
+
+const typography: Variable[] = [
+  {name:"size-button-caption", value: "16px",},
+  {name:"size-header", value: "22px",},
+  {name:"size-title", value: "64px",},
+  {name:"size-paragraph", value: "16px",},
+]
+
+export {colorScheme, misc, typography};

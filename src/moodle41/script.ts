@@ -1,6 +1,153 @@
-import { registerVariables } from "@common/assets";
+import { registerAssets, registerVariables } from "@common/assets";
+import $ from "jquery";
 
-import { scheme as colorScheme } from "./variables";
-import "./styles.scss";
+import { colorScheme, misc, typography } from "./variables";
+import "./styles/main.scss";
 
-registerVariables(colorScheme);
+import arrowUp from "./assets/arrowUp.svg";
+import buttonDecoration from "./assets/buttonDecoration.svg";
+import catalog from "./assets/catalog.svg";
+import certificate from "./assets/certificate.svg";
+import course from "./assets/course.svg";
+import forum from "./assets/forum.svg";
+import help from "./assets/help.svg";
+import home from "./assets/home.svg";
+import notification from "./assets/notification.svg";
+import search from "./assets/search.svg";
+import settings from "./assets/settings.svg";
+import user from "./assets/user.svg";
+import workspace from "./assets/workspace.svg";
+
+registerVariables([
+  ...colorScheme,
+  ...misc,
+  ...typography,
+]);
+
+registerAssets([
+  {name: "button-decoration", data: buttonDecoration},
+  {name: "notification", data: notification},
+]);
+
+// ======================
+// NAV BAR
+// ======================
+
+const leftLinkIcons = [home, workspace, course, search, search, catalog, help];
+const leftLinkText = ["Home", "Dashboard", "My Units", "", "Search Units", "Handbook", "Help"];
+
+$("nav.navbar").removeClass("bg-white");
+
+$("a.navbar-brand").remove(); // monash logo
+
+$(".navbar>.header-user").remove(); // edit mode
+
+// left nav links buttons
+$("nav li>a.nav-link")
+  .removeClass("nav-link")
+  .addClass("bm-button")
+  .addClass("bm-nav-link")
+  
+  .first() // Home button
+  .addClass("bm-home")
+  .addClass("bm-accented");
+
+
+// Move right nav links
+const _rightLinks = $(".custom-menus .custommenu");
+_rightLinks.each((index)=>{
+  const newListItem = $("<li></li>").appendTo("ul.navbar-nav")
+  _rightLinks.eq(index)
+    .removeClass("custommenu")
+    .addClass("bm-button")
+    .addClass("bm-nav-link")
+    .detach()
+    .appendTo(newListItem);
+});
+
+// add icons if do not exists
+if ($(".bm-nav-link img").length === 0){
+  let _leftLinks = $(".bm-nav-link").removeAttr("role");
+  _leftLinks.each((index) => {
+    _leftLinks.eq(index)
+      .empty()
+      .append($("<img/>").attr({
+        src: leftLinkIcons[index],
+      }))
+      .append(leftLinkText[index]);
+  });
+}
+
+// cleanup empty containers for nav right links
+$(".header-custom-menus .custom-menus").remove();
+
+// nav right popovers
+$(".header-custom-menus .popover-region [role]")
+  .removeAttr("role");
+
+$(".header-custom-menus .nav-link")
+  .removeClass("nav-link");
+
+$(".header-custom-menus .popover-region")
+  .addClass("bm-nav-icon-btn")
+  .addClass("bm-icon-btn");
+
+
+// append icon if not exist already
+if ($(".popover-region-notifications .popover-region-toggle img").length === 0){
+  $(".popover-region-notifications .popover-region-toggle") // notification button
+    .append($("<img/>").attr({
+      src: notification,
+    }));
+}
+
+// notification panel
+$(".popover-region-container .popover-region-header-container")
+  .removeClass("popover-region-header-container")
+  .addClass("bm-header-container");
+
+
+// notification buttons
+$(".popover-region-header-actions")
+  .removeClass("popover-region-header-actions")
+  .addClass("bm-notification-actions")
+  .detach()
+  .appendTo(".popover-region-container");
+  
+  $(".bm-notification-actions > a")
+  .addClass("bm-icon-btn")
+  .addClass("bm-white")
+  .empty();
+
+$(".popover-region-container .see-all-link")
+  .detach()
+  .appendTo(".bm-notification-actions");
+  
+$(".bm-notification-actions > .see-all-link")
+  .addClass("bm-button")
+  .addClass("bm-accent-secondary")
+  .removeClass("bm-white")
+  .removeClass("bm-icon-btn")
+  .empty();
+
+if ($(".mark-all-read-button img").length === 0){
+  $(".mark-all-read-button")
+  .append($("<img/>").attr({
+    src: certificate,
+  }));
+}
+
+if ($(".bm-icon-btn[title=\"Notification preferences\"] img").length === 0){
+  $(".bm-icon-btn[title=\"Notification preferences\"]")
+  .append($("<img/>").attr({
+    src: settings,
+  }));
+}
+
+if ($(".see-all-link > *").length === 0){
+  $(".see-all-link")
+  .append("See All")
+  .append($("<img/>").attr({
+    src: arrowUp,
+  }));
+}
