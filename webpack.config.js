@@ -1,6 +1,5 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
-// import { WebpackManifestPlugin } from 'webpack-manifest-plugin';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -23,7 +22,11 @@ export default {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
         exclude: /node_modules/,
-      }
+      },
+      {
+        test: /\.svg/,
+        type: 'asset'
+      },
     ],
   },
   resolve: {
