@@ -15,13 +15,6 @@
     "48": "icons/icon_48.png"
   },
 
-  "web_accessible_resources": [
-    {
-      "resources": ["moodle41/styles.css"],
-      "matches": ["*://learning.monash.edu/*"]
-    }
-  ],
-
   "content_scripts": [
     {
       "matches": ["*://learning.monash.edu/*"],
