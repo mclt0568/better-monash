@@ -4,6 +4,7 @@ import $ from "jquery";
 import { colorScheme, misc, typography } from "./variables";
 import "./styles/main.scss";
 
+import avatar from "./assets/avatar.svg";
 import buttonDecoration from "./assets/buttonDecoration.svg";
 import catalog from "./assets/catalog.svg";
 import certificate from "./assets/certificate.svg";
@@ -12,8 +13,10 @@ import course from "./assets/course.svg";
 import forum from "./assets/forum.svg";
 import help from "./assets/help.svg";
 import home from "./assets/home.svg";
+import logout from "./assets/logout.svg";
 import notification from "./assets/notification.svg";
 import search from "./assets/search.svg";
+import report from "./assets/report.svg";
 import settings from "./assets/settings.svg";
 import user from "./assets/user.svg";
 import workspace from "./assets/workspace.svg";
@@ -27,6 +30,7 @@ registerVariables([
 registerAssets([
   {name: "button-decoration", data: buttonDecoration},
   {name: "notification", data: notification},
+  {name: "user", data: user},
 ]);
 
 // ======================
@@ -154,10 +158,58 @@ if ($(".see-all-link > *").length === 0){
 
 // message button
 $("div[data-region=\"popover-region-messages\"]")
-.addClass("bm-message-popover-btn")
+.addClass("bm-message-popover-btn");
 
 $(".bm-message-popover-btn a")
   .empty()
   .append($("<img/>").attr({
     src: forum,
   }));
+
+
+// User dropdown button
+const userActonMenuIcons = [avatar, report, forum, settings, logout];
+
+const _username = $("#user-menu-toggle .userfullname").text();
+$("#user-menu-toggle")
+  .removeAttr("role")
+  .removeClass("dropdown-toggle")
+  .removeClass("btn")
+  .addClass("bm-button")
+  .addClass("bm-accent-secondary")
+  .empty()
+  .append($("<img/>").attr({
+    src: user,
+  }))
+  .append($("<span></span>")
+    .addClass("userfullname")
+    .text(_username));
+
+const _buttonSize = getComputedStyle(
+  document.getElementById("user-menu-toggle")!)
+  .width;
+
+$("#user-action-menu div.dropdown-divider")
+  .remove();
+
+$("#user-action-menu a.dropdown-item")
+  .removeClass("dropdown-item")
+  .addClass("bm-button");
+
+const _dropdownItem = $("#user-action-menu a.bm-button");
+if ($("#user-action-menu a.bm-button img").length === 0){
+  _dropdownItem.each((index) => {
+    _dropdownItem.eq(index)
+      .prepend($("<img/>").attr({
+        src: userActonMenuIcons[index],
+      }))
+  })
+}
+_dropdownItem
+  .eq(_dropdownItem.length - 1)
+  .addClass("logout")
+
+registerVariables([
+  {name: "username", value: `"${_username}"`},
+  {name: "username-width", value: _buttonSize},
+]);

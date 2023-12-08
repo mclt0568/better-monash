@@ -57,7 +57,6 @@ li[data-key=home]{
 }
 
 // notification
-
 .popover-region-notifications{
   padding: 0 !important;
   height: $navbar-height;
@@ -161,5 +160,56 @@ li[data-key=home]{
     display: flex !important;
     align-items: center;
     justify-content: center;
+  }
+}
+
+// user button
+#user-menu-toggle{
+  padding: 10px 30px 10px 10px;
+  height: $navbar-height;
+}
+.usermenu{
+  padding: 0px !important;
+}
+
+// user menu
+#user-menu-toggle[aria-expanded="true"]{
+  &::after{
+    content: $username;
+    color: $accent;
+    position:absolute;
+    padding: 8px 30px 0px 43px;
+    left: 0px;
+    height: $navbar-height;
+    background-color: $accent-background-active;
+    background-image: $user;
+    background-repeat: no-repeat;
+    background-position: top 10px left 10px;
+    box-shadow: $default-float;
+  }
+}
+
+#user-action-menu{
+  margin: 0 !important;
+  border: 0;
+  box-shadow: $default-float;
+  background-color: $background;
+  padding: 0px;
+  width: 200px;
+  
+  & a{
+    height: $icon-btn-size;
+    display: flex;
+    padding: 8px 20px 8px 10px;
+    gap: 13px;
+  }
+  
+  & a.logout{
+    color: $scheme-dangerous;
+    
+    &:hover{
+      color: $scheme-dangerous;
+      background-color: $scheme-dangerous-background;
+    }
   }
 }
