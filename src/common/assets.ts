@@ -16,11 +16,11 @@ let assets: Asset[] = [];
 let variables: Variable[] = [];
 
 function assetsToCSS(assets: Asset[]): string{
-  return assets.map(({name, data})=>`--${name}: url(${data});`).join();
+  return assets.map(({name, data})=>`--${name}: url(${data});`).join("");
 }
 
 function variablesToCSS(variable: Variable[]): string{
-  return variable.map(({name, value})=>`--${name}: ${value};`).join();
+  return variable.map(({name, value})=>`--${name}: ${value};`).join("");
 }
 
 function getStyleElement(): JQuery<HTMLElement>{
