@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   gap: 13px;
-  transition: 0.5s;
+  transition: $default-active;
   user-select: none;
   -webkit-user-select: none;
   
@@ -46,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
+  transition: $default-active;
   user-select: none;
   -webkit-user-select: none;
   
