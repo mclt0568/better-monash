@@ -14,6 +14,7 @@ const colorScheme: Variable[] = [
   {name:"foreground-secondary", value: "#929292",},
   {name:"scheme-dangerous", value: "#B90000",},
   {name:"scheme-dangerous-background", value: "#FFE3E3",},
+  {name:"background-filter", value: "rgba(209, 209, 209, 0.45)",},
 ];
 
 const misc: Variable[] = [

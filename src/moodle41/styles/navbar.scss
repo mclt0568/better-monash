@@ -72,23 +72,33 @@ li[data-key=home]{
   }
 }
 
-.popover-region-toggle::before{
-  border: 0 !important;
-}
+.popover-region-toggle{
+  &::before{
+    border: 0 !important;
+    position: absolute;
+    top: 0;
+    height: $navbar-height;
+    width: 200vw;
+    background: $background-filter;
+    z-index: 1;
+    cursor: default;
+    right: -500px;
+  }
 
-.popover-region-toggle::after{
-  border: 0 !important;
-  left: 0px !important;
-  top: 0px !important;
-  right: unset !important;
-  bottom: unset !important;
-  width: $navbar-height;
-  height: $navbar-height;
-  background-color: $background;
-  background-image: $notification;
-  background-repeat: no-repeat;
-  background-position: center center;
-  box-shadow: $default-float;
+  &::after{
+    border: 0 !important;
+    left: 0px !important;
+    top: 0px !important;
+    right: unset !important;
+    bottom: unset !important;
+    width: $navbar-height;
+    height: $navbar-height;
+    background-color: $background;
+    background-image: $notification;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: $default-float;
+  }
 }
 
 .popover-region-container {
@@ -174,6 +184,19 @@ li[data-key=home]{
 
 // user menu
 #user-menu-toggle[aria-expanded="true"]{
+  &::before{
+    content: "";
+    border: 0 !important;
+    position: absolute;
+    top: 0;
+    height: $navbar-height;
+    width: 200vw;
+    background: $background-filter;
+    z-index: 1;
+    cursor: default;
+    right: -500px;
+  }
+
   &::after{
     content: $username;
     color: $accent;
@@ -186,6 +209,7 @@ li[data-key=home]{
     background-repeat: no-repeat;
     background-position: top 10px left 10px;
     box-shadow: $default-float;
+    z-index: 10;
   }
 }
 
