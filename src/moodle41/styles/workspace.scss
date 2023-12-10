@@ -31,3 +31,19 @@
     font-size: $size-title;
   }
 }
+
+// side pane open/close
+.bm-side-pane-open, .bm-side-pane-toggle{
+  height: $navbar-height;
+  width: $navbar-height;
+}
+
+// drawer
+.drawerheader{
+  height: auto;
+  background-color: transparent;
+}
+
+.drawer-right{
+  background-color: transparent;
+}

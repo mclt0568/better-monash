@@ -10,6 +10,7 @@
   transition: $default-active;
   user-select: none;
   -webkit-user-select: none;
+  border: 0 !important;
   
   &:hover{
     background-color: $background-active;
@@ -49,6 +50,7 @@
   transition: $default-active;
   user-select: none;
   -webkit-user-select: none;
+  border: 0 !important;
   
   &:hover{
     background-color: $background-active;
