@@ -1,7 +1,5 @@
-@import "./variable_proxy.scss";
+@import "./variable_forward.scss";
 
-$navbar-height: 40px;
-$icon-btn-size: 40px;
 
 // Set height
 .navbar.fixed-top, .bm-nav-link {

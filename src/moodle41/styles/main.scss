@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,400;0,500;1,200;1,400;1,500&display=swap');
 
-@import "./variable_proxy.scss";
+@import "./variable_forward.scss";
 @import "./components.scss";
 
 @import "./navbar.scss";
+@import "./workspace.scss";
 
 body, #page-my-index {
   background-color: $background-secondary !important;

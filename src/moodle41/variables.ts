@@ -20,6 +20,8 @@ const colorScheme: Variable[] = [
 const misc: Variable[] = [
   {name:"default-float", value: "0px 3px 3px 0px rgba(0,0,0,0.24)",},
   {name:"default-active", value: "0.4s cubic-bezier(.05,.65,.27,.96)",},
+  {name:"navbar-height", value: "40px",},
+  {name:"icon-btn-size", value: "40px",},
 ];
 
 const typography: Variable[] = [
