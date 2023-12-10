@@ -1,5 +1,33 @@
 @import "./variable_forward.scss";
 
-#page{
+#page.drawers{
+  margin-top: $navbar-height !important;
+}
 
+// Page header (with image)
+#page-header{
+  height: $page-title-height;
+  background-image: $page-title-image;
+  background-size: cover;
+  background-position: center center;
+
+  & .header-banner{
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(248,248,248,0.03) 0%,
+      rgba(248, 248, 248, 0.5) 29%,
+      rgba(248, 248, 248, 0.768) 44%,
+      rgba(248,248,248,1) 67%) !important;
+    padding-left: 45px;
+    padding-bottom: 10px;
+  }
+  
+  // title
+  & h1{
+    color: $accent;
+    text-shadow: none;
+    font-weight: $weight-extra-light;
+    font-size: $size-title;
+  }
 }

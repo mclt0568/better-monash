@@ -213,3 +213,10 @@ registerVariables([
   {name: "username", value: `"${_username}"`},
   {name: "username-width", value: _buttonSize},
 ]);
+
+// Page title
+$("#page-header .page-header-headings")
+  .removeClass("page-header-headings");
+
+$("#page-header h1")
+  .removeClass("h2");
