@@ -54,3 +54,47 @@
     height: 100%;
   }
 }
+
+// side pane block card
+.drawer.drawer-right section.card{
+  background-color: $background;
+  box-shadow: none;
+
+  & .card-title{
+    background-color: transparent;
+    color: $foreground;
+    font-size: $size-header;
+    font-weight: $weight-regular;
+    padding: 10px;
+  }
+
+  & .content{
+    margin-top: 0 !important;
+    padding: 0 13px;
+    
+    & * {
+      overflow-y: hidden;
+    }
+  }
+}
+
+// To old moodle
+#inst38662{
+  & br{
+    display: none;
+  }
+
+  & .footer{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 -13px;
+  }
+  
+  & a{
+    width: 150px;
+    padding: 10px 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

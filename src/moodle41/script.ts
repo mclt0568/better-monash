@@ -4,6 +4,7 @@ import $ from "jquery";
 import { colorScheme, misc, typography } from "./variables";
 import "./styles/main.scss";
 
+import arrowUp from "./assets/arrowUp.svg";
 import avatar from "./assets/avatar.svg";
 import buttonDecoration from "./assets/buttonDecoration.svg";
 import catalog from "./assets/catalog.svg";
@@ -250,3 +251,17 @@ $("<button/>")
     $(".drawer-toggler button").trigger("click");
   })
   .appendTo(".header-custom-menus");
+
+// side pane (to old monash)
+$("<a></a>")
+  .attr({
+    href:"https://lms.monash.edu/"
+  })
+  .append("Moodle 3.9")
+  .append($("<img/>").attr({
+    src: arrowUp,
+  }))
+  .addClass("bm-button")
+  .addClass("bm-accent-secondary")
+  // .addClass("bm-to-old-moodle")
+  .appendTo("#inst38662 .footer");
