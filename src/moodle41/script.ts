@@ -2,9 +2,9 @@ import { registerAssets, registerVariables } from "@common/assets";
 import $ from "jquery";
 
 import { colorScheme, misc, typography } from "./variables";
+import { applyThemes } from "./url";
 import "./styles/main.scss";
 
-import arrowUp from "./assets/arrowUp.svg";
 import avatar from "./assets/avatar.svg";
 import buttonDecoration from "./assets/buttonDecoration.svg";
 import catalog from "./assets/catalog.svg";
@@ -237,30 +237,21 @@ $("#theme_boost-drawers-blocks button")
 
 let _sidePaneStatus = $(".drawer.drawer-right.show").length !== 0;
 
-$("<button/>")
-  .addClass("bm-side-pane-toggle")
-  .addClass("bm-icon-btn")
-  .append($("<img/>").attr({
-    src: _sidePaneStatus ? sidePanelClose : sidePanelOpen,
-  }))
-  .on("click", ()=>{
-    _sidePaneStatus = !_sidePaneStatus;
-    $(".bm-side-pane-toggle img").attr({
+if ($(".bm-side-pane-toggle").length === 0){
+  $("<button/>")
+    .addClass("bm-side-pane-toggle")
+    .addClass("bm-icon-btn")
+    .append($("<img/>").attr({
       src: _sidePaneStatus ? sidePanelClose : sidePanelOpen,
-    });
-    $(".drawer-toggler button").trigger("click");
-  })
-  .appendTo(".header-custom-menus");
+    }))
+    .on("click", ()=>{
+      _sidePaneStatus = !_sidePaneStatus;
+      $(".bm-side-pane-toggle img").attr({
+        src: _sidePaneStatus ? sidePanelClose : sidePanelOpen,
+      });
+      $(".drawer-toggler button").trigger("click");
+    })
+    .appendTo(".header-custom-menus");
+}
 
-// side pane (to old monash)
-$("<a></a>")
-  .attr({
-    href:"https://lms.monash.edu/"
-  })
-  .append("Moodle 3.9")
-  .append($("<img/>").attr({
-    src: arrowUp,
-  }))
-  .addClass("bm-button")
-  .addClass("bm-accent-secondary")
-  .appendTo("#inst38662 .footer");
+applyThemes();

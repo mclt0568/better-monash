@@ -76,12 +76,12 @@
     color: $foreground;
     font-size: $size-header;
     font-weight: $weight-regular;
-    padding: 10px;
+    padding: 20px 15px;
   }
 
   & .content{
     margin-top: 0 !important;
-    padding: 0 13px;
+    padding: 0 15px;
     
     & * {
       overflow-y: hidden;
@@ -98,10 +98,15 @@
   & .footer{
     display: flex;
     justify-content: flex-end;
-    margin: 0 -13px;
+    margin: 0 -15px;
   }
   
-  & a{
+  & .content a{
+    display: none;
+  }
+
+  & a.bm-to-moodle39{
+    display: block;
     width: 150px;
     padding: 10px 11px;
     display: flex;
