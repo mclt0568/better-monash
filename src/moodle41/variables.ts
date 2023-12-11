@@ -21,6 +21,7 @@ const misc: Variable[] = [
   {name:"default-float", value: "0px 3px 3px 0px rgba(0,0,0,0.24)",},
   {name:"default-active", value: "0.4s cubic-bezier(.05,.65,.27,.96)",},
   {name:"navbar-height", value: "40px",},
+  {name:"side-pane-width", value: "400px",},
   {name:"icon-btn-size", value: "40px",},
   {name:"page-title-height", value: "250px",},
   {name:"page-title-image", value: "url(https://images.adsttc.com/media/images/5f35/b347/b357/655d/6f00/0030/slideshow/1_1432_00_N555_extralarge.jpg)",},

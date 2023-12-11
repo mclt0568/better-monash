@@ -263,5 +263,4 @@ $("<a></a>")
   }))
   .addClass("bm-button")
   .addClass("bm-accent-secondary")
-  // .addClass("bm-to-old-moodle")
   .appendTo("#inst38662 .footer");

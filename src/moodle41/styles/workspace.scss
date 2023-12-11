@@ -2,6 +2,15 @@
 
 #page.drawers{
   margin-top: $navbar-height !important;
+  
+  &.show-drawer-right{
+    margin-right: $side-pane-width !important;
+  }
+}
+
+// goto top link
+#goto-top-link{
+  display: none !important;
 }
 
 // Page header (with image)
@@ -44,10 +53,12 @@
   background-color: transparent;
 }
 
-.drawer-right{
+.drawer.drawer-right{
   background-color: transparent;
   top: $navbar-height;
   padding: 10px 0;
+  width: $side-pane-width;
+  max-width: $side-pane-width;
   height: calc(100vh - #{$navbar-height});
   
   & .drawercontent{
