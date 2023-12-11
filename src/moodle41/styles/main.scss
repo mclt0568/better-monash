@@ -13,3 +13,20 @@ body, #page-my-index {
 * {
   font-family: 'IBM Plex Sans', sans-serif !important;
 }
+
+a:not([class]) {
+  color: $accent-active;
+  text-decoration: underline dotted;
+  
+  &:hover{
+    color: $accent;
+    background-color: $accent-background;
+  }
+  
+  &:focus{
+    color: $accent;
+    background-color: $accent-background-active;
+    box-shadow: none;
+    outline: none;
+  }
+}
