@@ -71,6 +71,18 @@
   background-color: $background;
   box-shadow: none;
 
+  & h5, & p, & strong {
+    color: $foreground;
+  }
+
+  & strong, & p {
+    font-size: $size-paragraph;
+  }
+
+  & strong, & b{
+    font-weight: $weight-medium !important;
+  }
+
   & .card-title{
     background-color: transparent;
     color: $foreground;
@@ -89,8 +101,8 @@
   }
 }
 
-// To old moodle
-#inst38662{
+// To old moodle & get help
+#inst240, #inst38662{
   & br{
     display: none;
   }
@@ -101,12 +113,11 @@
     margin: 0 -15px;
   }
   
-  & .content a{
+  & .content a:not([class]){
     display: none;
   }
 
-  & a.bm-to-moodle39{
-    display: block;
+  & a{
     width: 150px;
     padding: 10px 11px;
     display: flex;
