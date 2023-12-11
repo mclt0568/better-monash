@@ -38,7 +38,7 @@
   width: $navbar-height;
 }
 
-// drawer
+// side pane drawer
 .drawerheader{
   height: auto;
   background-color: transparent;
@@ -46,4 +46,11 @@
 
 .drawer-right{
   background-color: transparent;
+  top: $navbar-height;
+  padding: 10px 0;
+  height: calc(100vh - #{$navbar-height});
+  
+  & .drawercontent{
+    height: 100%;
+  }
 }
