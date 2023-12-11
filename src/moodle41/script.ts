@@ -243,11 +243,10 @@ $("<button/>")
     src: _sidePaneStatus ? sidePanelClose : sidePanelOpen,
   }))
   .on("click", ()=>{
-    $(".drawer.drawer-right").toggleClass("show");
-    $(".drawers.drag-container").toggleClass("show-drawer-right");
     _sidePaneStatus = !_sidePaneStatus;
     $(".bm-side-pane-toggle img").attr({
       src: _sidePaneStatus ? sidePanelClose : sidePanelOpen,
     });
+    $(".drawer-toggler button").trigger("click");
   })
   .appendTo(".header-custom-menus");
