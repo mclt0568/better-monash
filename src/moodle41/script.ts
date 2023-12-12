@@ -14,6 +14,7 @@ import course from "./assets/course.svg";
 import forum from "./assets/forum.svg";
 import help from "./assets/help.svg";
 import home from "./assets/home.svg";
+import loading from "./assets/loading.svg";
 import logout from "./assets/logout.svg";
 import notification from "./assets/notification.svg";
 import search from "./assets/search.svg";
@@ -253,5 +254,12 @@ if ($(".bm-side-pane-toggle").length === 0){
     })
     .appendTo(".header-custom-menus");
 }
+
+$(".loading-icon")
+  .empty()
+  .addClass("bm-loading-icon")
+  .append($("<img/>").attr({
+    src: loading,
+  }));
 
 applyThemes();
