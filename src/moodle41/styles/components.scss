@@ -78,3 +78,8 @@
     }
   }
 }
+
+// Loading icon
+.bm-loading-icon img{
+  animation: spin 0.5s ease infinite;
+}

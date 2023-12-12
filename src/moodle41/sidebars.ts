@@ -158,6 +158,7 @@ export function calendar(){
     
 
   $("#inst250975 .loading-icon")
+    .addClass("bm-loading-icon")
     .empty()
     .append($("<img/>").attr({
       src: loading,
