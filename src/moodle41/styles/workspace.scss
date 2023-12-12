@@ -125,3 +125,68 @@
     align-items: center;
   }
 }
+
+// calendar sidebar
+.drawer.drawer-right #inst250975{
+  & .bm-calendar-content{
+    padding: 0 !important;
+  }
+  
+  & .bm-calendar-table{
+    margin: 15px !important;
+    width: calc(100% - 30px);
+  }
+  
+  & td.today .day-number-circle{
+    border-radius: 0;
+    color: $accent;
+    background-color: $accent-background;
+
+    & span {
+      font-weight: $weight-medium;
+    }
+  }
+
+  & thead th{
+    height: 50px;
+
+    & span{
+      color: $foreground;
+      font-weight: $weight-medium;
+    }
+  }
+
+  & .loading-icon img{
+    animation: spin 0.5s ease infinite;
+  }
+
+  & .bm-calendar-month-nav{
+    width: 100%;
+    margin: 0 !important;
+
+    & .calendar-controls{
+      display: flex;
+      align-items: center;
+    }
+
+    & h4{
+      text-align: left;
+      font-weight: $weight-regular;
+      font-size: $size-header !important;
+      flex: 1;
+      margin: 0;
+    }
+
+    & a{
+      width: $icon-btn-size-lrg !important;
+      height: $icon-btn-size-lrg;
+      display: flex !important;
+    }
+
+    & a.arrow_link:focus{
+      background-color: $background-active;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}

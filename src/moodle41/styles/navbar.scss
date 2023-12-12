@@ -2,7 +2,9 @@
 
 
 // Set height
-.navbar.fixed-top, .bm-nav-link {
+.navbar.fixed-top,
+.bm-nav-link,
+.primary-navigation .navigation {
   height: $navbar-height;
 }
 

@@ -2,7 +2,8 @@ import {
   sidebarToMoodle41, 
   concerningBehaviourHelp,
   covidHelp,
-  mfaHelp
+  mfaHelp,
+  calendar
 } from "./sidebars";
 
 type ThemeLookup = {
@@ -12,14 +13,14 @@ type ThemeLookup = {
 
 const urls = {
   any: /.*/,
-  dashboard: /^https\:\/\/learning\.monash\.edu\/my(\/|\/index.php|\/index.php\/)?$/,
-  myUnits: /^https\:\/\/learning\.monash\.edu\/my\/courses.php$/,
+  dashboard: /^https\:\/\/learning\.monash\.edu\/my(\/|\/index.php|\/index\.php\/)?((\?|\#).*)?$/,
+  myUnits: /^https\:\/\/learning\.monash\.edu\/my\/courses\.php((\?|\#).*)?$/,
 };
 
 const themeLookups: ThemeLookup[] = [
   {
     urls: [urls.dashboard],
-    callbacks: [covidHelp, mfaHelp]
+    callbacks: [covidHelp, mfaHelp, calendar]
   },
   {
     urls: [
