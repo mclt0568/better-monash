@@ -20,5 +20,11 @@
       "matches": ["*://learning.monash.edu/*"],
       "js": ["moodle41.bundle.js"]
     }
-  ]
+  ],
+
+  "permissions": ["tabs", "webNavigation"],
+
+  "background": {
+    "scripts": ["service.bundle.js"]
+  }
 }

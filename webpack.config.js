@@ -9,6 +9,7 @@ const __dirname = path.dirname(__filename);
 export default {
   entry: {
     moodle41: "./src/moodle41/script.ts",
+    service: "./src/serviceWorker.ts",
   },
   target: 'node',
   module: {
