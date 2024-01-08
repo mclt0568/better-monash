@@ -3,6 +3,8 @@ Better Monash
 
 A Manifest V3 plugin for customising Monash webpages. 
 
+<img style="border: 2px #CCC solid; border-radius: 10px" src="./example.png"/>
+
 ### Browser Support
 
 Currently only tested on Firefox. No Chrome / Chromium based browser support in plan at the moment.
