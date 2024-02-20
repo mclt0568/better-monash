@@ -42,7 +42,7 @@ registerAssets([
 // ======================
 
 const leftLinkIcons = [home, workspace, course, search, search, catalog, help];
-const leftLinkText = ["Home", "Dashboard", "My Units", "", "Search Units", "Handbook", "Help"];
+const leftLinkText = ["Home", "Dashboard", "My Units", "", "Preview Units", "Handbook", "Help"];
 
 $("nav.navbar").removeClass("bg-white");
 
@@ -217,6 +217,9 @@ registerVariables([
   {name: "username", value: `"${_username}"`},
   {name: "username-width", value: _buttonSize},
 ]);
+
+// remove that unwanted search button
+$(".nav-item.dropdown.dropdownmoremenu[data-region=\"morebutton\"]").detach().remove();
 
 // ======================
 // Workspace
