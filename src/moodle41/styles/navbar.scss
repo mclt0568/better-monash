@@ -26,6 +26,11 @@
   }
 }
 
+// fix transparent navigation bar
+.moremenu {
+  opacity: 1 !important;
+}
+
 
 // left link buttons
 .navbar-nav{
