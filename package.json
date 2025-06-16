@@ -4,6 +4,7 @@
   "description": "Customised Monash Webpages (Even better then stock?!?!?!11?11 😮",
   "type": "module",
   "scripts": {
+    "dev": "pnpm run webpack && cp -r static/* dist/ && web-ext run --firefox-profile dev -s dist/ && nodemon",
     "build": "pnpm run webpack && cp -r static/* dist/",
     "tsc": "tsc",
     "webpack": "webpack",
@@ -17,6 +18,7 @@
     "@types/webextension-polyfill": "^0.10.7",
     "css-loader": "^6.8.1",
     "node-sass": "^9.0.0",
+    "nodemon": "^3.1.10",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.5.1",
