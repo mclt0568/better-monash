@@ -185,4 +185,14 @@
       outline: none;
     }
   }
+
+  //has event button
+  & .hasevent{
+    a {
+      color: $accent;
+    }
+  }
+}
+.maincalendar .calendarmonth td a.day:focus{
+
 }
