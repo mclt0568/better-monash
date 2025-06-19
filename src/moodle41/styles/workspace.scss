@@ -192,7 +192,8 @@
       color: $accent;
     }
   }
-}
-.maincalendar .calendarmonth td a.day:focus{
 
+  & a.day:focus{
+
+  }
 }
