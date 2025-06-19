@@ -31,3 +31,9 @@ a:not([class]) {
     outline: none;
   }
 }
+
+.bm-no-focus-effect{
+  &:focus {
+    box-shadow: none !important;
+  }
+}

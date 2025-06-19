@@ -14,6 +14,8 @@ const colorScheme: Variable[] = [
   {name:"foreground-secondary", value: "#929292",},
   {name:"scheme-dangerous", value: "#B90000",},
   {name:"scheme-dangerous-background", value: "#FFE3E3",},
+  {name:"scheme-warning", value: "#B17A14",},
+  {name:"scheme-warning-background", value: "#FFECC8",},
   {name:"background-filter", value: "rgba(209, 209, 209, 0.45)",},
 ];
 
@@ -25,7 +27,7 @@ const misc: Variable[] = [
   {name:"icon-btn-size", value: "40px",},
   {name:"icon-btn-size-lrg", value: "46px",},
   {name:"page-title-height", value: "250px",},
-  {name:"page-title-image", value: "url(https://images.adsttc.com/media/images/5f35/b347/b357/655d/6f00/0030/slideshow/1_1432_00_N555_extralarge.jpg)",},
+  {name:"page-title-image", value: "url(https://i.imgur.com/qrVyIeD.jpeg)",},
 ];
 
 const typography: Variable[] = [
